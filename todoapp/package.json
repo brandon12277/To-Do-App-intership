@@ -1,6 +1,7 @@
 {
   "name": "todoapp",
   "version": "0.1.0",
+  "publicPath": "https://todoapp-31v5.onrender.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
