@@ -1,0 +1,39 @@
+.design{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.block1{
+    position:absolute;
+    top:0px;
+    left:0px;
+    clip-path: polygon(100% 76%, 1% 0, 0 100%);
+
+
+    width:700px;
+    height:800px;
+    background : linear-gradient(45deg,#b0b8ce,#6b66c6);
+    z-index:0;
+}
+.block2{
+    z-index:0;
+    position:absolute;
+    top:0px;
+    right:-5%;
+    width:900px;
+    height:900px;
+    clip-path: polygon(100% 88%, 94% 0, 0 100%);
+
+
+    background : linear-gradient(45deg,#b148d2,#6b66c6);
+}
+.block3{
+    position:absolute;
+    top:0px;
+    left:30%;
+    clip-path: circle(50% at 50% 50%);
+    width:800px;
+    height:800px;
+    background : linear-gradient(45deg,#ff2c2c,#691883);
+
+}

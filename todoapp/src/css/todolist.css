@@ -1,0 +1,190 @@
+:root{
+    --red:#ff2c2c;
+    --grey:#cccdc6;
+}
+
+
+.cont{
+    display:flex;
+    flex-direction: column;
+    z-index:1;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    
+   
+   
+
+}
+.m{
+    margin : 0% 0% 5% 5%;
+}
+.shadow{
+    box-shadow: 0px 0px 2px #1c1c1c;
+}
+.todo-block{
+    display: flex;
+    z-index:1;
+    flex-direction: column;
+    background-color: white;
+    width:70vh;
+   padding:2%;
+   
+    border-radius: 0.45em;
+}
+
+.taskbar{
+    padding: 2%;
+    border-radius: 0.6em;
+    outline:none;
+    border: 1px solid grey;
+    width:50%;
+    margin-right:1%;
+}
+.add{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    cursor: pointer;
+    margin-top: 2%;
+    width:20%;
+    background-color: var(--red);
+    border: none;
+    border-radius: 1em;
+    padding:1.8%;
+}
+.task-div{
+
+    width:90%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding:2%;
+    background-color: var(--grey);
+    border-radius: 0.45em;
+}
+
+.task-block{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    width:95%;
+    gap:2%;
+    border-radius: 0.45em;
+    padding:2%;
+    margin:2%;
+    border: 0.5px solid grey;
+    animation: task-load 0.8s forwards;
+    
+}
+@keyframes task-load{
+    0%{
+       transform: scale(0);
+    }
+    100%{
+       transform: scale(1);
+    }
+ }
+.h10{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  display: inline;
+  text-decoration: none;
+    width:90%;
+    color:#1c1c1c;
+    
+    
+}
+
+#d_msg{
+    z-index:1;
+    position:absolute;
+    font-family: 'Montserrat', sans-serif;
+    top:2%;
+    left:10%;
+    width:70%;
+    padding:1%;
+    border-radius: 0.45em;
+
+    background-color:#d83131 ;
+
+}
+
+.buttons{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:auto;
+    
+    
+}
+.task-button{
+    border:none;
+    background: none;
+    cursor: pointer;
+    
+}
+.task-button i{
+    transform:scale(1.2);
+}
+#delete{
+    color:grey;
+    transition: 0.5s;
+    
+}
+#delete:hover{
+    color:#ff2c2c;
+    transform:scale(1.5) rotateZ(90deg);
+
+}
+
+#tick{
+    background-color: greenyellow;
+    transform: scale(2);
+}
+.checkbox-dot{
+    transform: scale(1.5);
+    display:none;
+    color:#ff2c2c;
+    animation: pulse 0.5s forwards;
+    animation-timing-function: ease-in;
+    
+  }
+  .checkbox-cross{
+    transform: scale(1.5);
+    display:none;
+    color:#ff2c2c;
+    animation: pulse 0.5s forwards;
+    animation-timing-function: ease-in;
+    
+  }
+  @keyframes pulse{
+     0%{
+        transform: scale(0);
+     }
+     50%{
+        transform: scale(1.5);
+     }
+     75%{
+        transform: scale(1.0);
+     }
+     100%{
+        transform: scale(1.5);
+     }
+  }
+
+
+  #tick:checked + .checkbox-dot {
+    display:flex;
+  }
+  #tick:checked{
+    display:none;
+  }
+
+  .checkbox-dot:focus{
+    display:none;
+  }
+
+  .checkbox-dot:focus + #tick{
+    display:flex;
+  }
