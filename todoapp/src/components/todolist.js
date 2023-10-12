@@ -13,7 +13,7 @@ export default function ToDoList(){
     useEffect(() => {
         console.log("hello")
         
-        axios.get("http://localhost:5000/getTasks?user="+user)
+        axios.get("https://taskapi-0jsl.onrender.com/getTasks?user="+user)
         .then(response => {
            if(response.data == 404){
              window.location.href="/"
@@ -32,14 +32,14 @@ export default function ToDoList(){
       function deleteTask(index){
         console.log(index)
         let task = document.getElementById(index)?document.getElementById(index).innerHTML:""
-        document.getElementById(index).style.textDecoration="none";
-        document.querySelectorAll(".checkbox-cross")[index].style.display = "none";
-        if( document.querySelectorAll("#tick")[index].checked)document.querySelectorAll(".checkbox-dot")[index].style.display = "block";
-        document.querySelectorAll("#tick")[index].style.display = "block";
+        
 
-        axios.post("http://localhost:5000/deleteTask?user="+user, {task:task})
+        axios.post("https://taskapi-0jsl.onrender.com/deleteTask?user="+user, {task:task})
         .then(response=>{
-            
+          document.getElementById(index).style.textDecoration="none";
+          document.querySelectorAll(".checkbox-cross")[index].style.display = "none";
+          if( document.querySelectorAll("#tick")[index].checked)document.querySelectorAll(".checkbox-dot")[index].style.display = "block";
+          document.querySelectorAll("#tick")[index].style.display = "block";
             SetTasks(response.data)
         }
 
@@ -60,7 +60,7 @@ export default function ToDoList(){
       }
       function addTask(){
         let task = document.getElementById("task").value
-        axios.post("http://localhost:5000/addTask?user="+user, {task:task})
+        axios.post("https://taskapi-0jsl.onrender.com/addTask?user="+user, {task:task})
         .then(response=>{
           document.getElementById("task").value=""
             SetTasks(response.data)
@@ -111,6 +111,7 @@ export default function ToDoList(){
                         </div>
                       ))
                      }
+                     
                        
                 </div>
                 

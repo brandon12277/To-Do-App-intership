@@ -12,7 +12,7 @@ export default function Home(){
         let data ={
             user:user
         }
-       axios.post("http://localhost:5000/createuser", data)
+       axios.post("https://taskapi-0jsl.onrender.com/createuser", data)
        .then(response => {
           if(response.data == 404){
             document.getElementById("new_error").innerHTML='<i class="fa-regular fa-circle-xmark"></i> User Already Exists'
@@ -31,7 +31,7 @@ export default function Home(){
     let data ={
         user:user
     }
-   axios.post("http://localhost:5000/displayuser", data)
+   axios.post("https://taskapi-0jsl.onrender.com/displayuser", data)
    .then(response => {
       if(response.data == 404){
         document.getElementById("error_exist").innerHTML='<i class="fa-regular fa-circle-xmark"></i>User Doesnt Exist'

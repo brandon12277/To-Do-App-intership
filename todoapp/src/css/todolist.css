@@ -28,11 +28,12 @@
 .todo-block{
     display: flex;
     z-index:1;
+    margin-top:1%;
     flex-direction: column;
     background-color: white;
     width:70vh;
    padding:2%;
-   
+   overflow: scroll;
     border-radius: 0.45em;
 }
 
@@ -187,4 +188,17 @@
 
   .checkbox-dot:focus + #tick{
     display:flex;
+  }
+
+  @media (max-width: 768px) {
+    .todo-block{
+        
+        width:50vh;
+        padding:3%;
+    }
+    .taskbar{
+        
+        width:70%;
+       
+    }
   }
