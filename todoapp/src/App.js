@@ -10,7 +10,7 @@ function App() {
       <Routes>
        
           <Route index element={<Home />} />
-          <Route path="ToDoList/:user" element={<ToDoList />} />
+          <Route path="/ToDoList/:user" element={<ToDoList />} />
       </Routes>
     </BrowserRouter>
     </div>
